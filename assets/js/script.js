@@ -26,6 +26,7 @@ const overlay = document.querySelector("[data-overlay]");
 const modalImg = document.querySelector("[data-modal-img]");
 const modalTitle = document.querySelector("[data-modal-title]");
 const modalText = document.querySelector("[data-modal-text]");
+const modalTime = document.querySelector("[data-modal-time]");
 
 // modal toggle function
 const testimonialsModalFunc = function () {
@@ -42,7 +43,44 @@ for (let i = 0; i < testimonialsItem.length; i++) {
     modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
     modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
     modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
-
+	switch (modalTitle.innerHTML){
+      case "Daniel Kong":
+        modalTime.innerHTML = "May 1, 2021 - May 5, 2021";
+        break;
+      case "Ameet Khabra":
+        modalTime.innerHTML = "Aug 30, 2021"
+        break;
+	  case "Martim Roll":
+        modalTime.innerHTML = "Jul 18, 2021 - Aug 16, 2021"
+        break;
+	  case "Leandro Conti":
+        modalTime.innerHTML = "Aug 30, 2021"
+        break;
+	  case "Amir Nada":
+        modalTime.innerHTML = "Jun 27, 2023 - Jul 24, 2023"
+        break;
+	  case "Richard Bushell":
+        modalTime.innerHTML = "Nov 17, 2023 - Feb 21, 2024"
+        break;
+	  case "Maria Andreana Piluzza":
+        modalTime.innerHTML = "Nov 20, 2021"
+        break;
+	  case "Arun Rajendran":
+        modalTime.innerHTML = "Sept 30, 2021"
+        break;
+	  case "Raphael Woods":
+        modalTime.innerHTML = "Sep 27, 2021 - Oct 1, 2021"
+        break;
+	  case "Andreana":
+        modalTime.innerHTML = "Apr 27, 2022 - May 4, 2022"
+        break;
+	  case "Peter Park":
+        modalTime.innerHTML = "Sep 1, 2021 - Sep 13, 2021"
+        break;
+	  case "Samir Bihar":
+        modalTime.innerHTML = "Aug 24, 2021 - Aug 27, 2021"
+        break;
+    }
     testimonialsModalFunc();
 
   });
